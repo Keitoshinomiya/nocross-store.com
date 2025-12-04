@@ -125,11 +125,11 @@ img { max-width: 100%; display: block; }
 }
 
 .logo a {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 26px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 24px;
     font-weight: 700;
     color: var(--primary);
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .logo-sub {
@@ -433,6 +433,53 @@ img { max-width: 100%; display: block; }
 .ceo-position { font-size: 0.9rem; color: var(--text-light); margin-bottom: 5px; }
 .ceo-name { font-size: 1.4rem; font-weight: 700; color: var(--primary); }
 
+/* Strengths / Features Grid */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+    transition: var(--transition);
+    border-top: 4px solid transparent;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-top-color: var(--secondary);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: var(--secondary);
+    margin-bottom: 24px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.feature-card p {
+    color: var(--text-light);
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
 /* Business Section */
 .business-container {
     display: grid;
@@ -704,6 +751,43 @@ img { max-width: 100%; display: block; }
     .footer-top { flex-direction: column; gap: 40px; }
     .footer-nav { flex-direction: column; gap: 30px; }
     .faq-grid { grid-template-columns: 1fr; }
+    
+    /* News Ticker Mobile Optimization */
+    .ticker-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ticker-label {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        margin-right: 0;
+        margin-bottom: 10px;
+        padding-right: 0;
+        padding-bottom: 8px;
+        width: 100%;
+        display: block;
+    }
+    .ticker-list {
+        width: 100%;
+    }
+    .ticker-list li {
+        flex-wrap: wrap;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        align-items: baseline;
+    }
+    .ticker-list li:last-child {
+        border-bottom: none;
+    }
+    .ticker-list .date {
+        margin-right: 10px;
+        font-size: 12px;
+    }
+    .ticker-list .category {
+        margin-right: 10px;
+        white-space: nowrap;
+    }
+    /* Ensure text wraps properly below if needed or stays inline */
     
     /* Mobile Nav (Simulated) */
     .main-nav.active {
